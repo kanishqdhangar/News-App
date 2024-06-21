@@ -1,38 +1,195 @@
-.App {
-  text-align: center;
+/* News.css */
+
+/* Overall container */
+.wrapper {
+  width:95%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navigation bar */
+.nav {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Upper nav date, title, search-bar */
+.uppernav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:10px 5%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.date {
+  font-size: 1.2rem;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Search bar */
+.right input {
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  color: #ecf0f1;
+  background-color: transparent; /* Ensure input has a transparent background */
+}
+
+/* Search button */
+.right button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+  border-radius: 5px;
+}
+
+/* Category Button - Active state */
+.lowernav button.active-category-button {
+  background-color: #bbceda; 
+}
+
+/* Category button - Default state */
+.right button.category-button {
+  background-color: #3498db; 
+}
+
+.right button img {
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+}
+
+/* Categories options bar */
+.lowernav {
+  background-color: #34495e;
+  padding: 10px 5%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.lowernav button{
+  margin: 5px;
+  font-size: 0.9rem;
+}
+
+.nav-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list li {
+  margin: 0 10px;
+}
+
+.nav-list li button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+.nav-list li button.active {
+  background-color: #2980b9; /* Active state background color */
+}
+
+/* News items */
+.news-items {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+.news Link{
+  color: black;
+  text-decoration: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.news-items img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.news-items-content {
+  flex: 1;
+}
+
+.news-items h2 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.news-items p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.news-items h5 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Detailed news */
+.detailed-news {
+  width: 95%;
+  max-width: 800px; /* Adjusted max-width for detailed news */
+  margin: 20px auto; /* Center align and add margin */
+  padding: 20px;
+  background-color: #ffffff; /* White background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.detailed-news:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.detailed-news img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.detailed-news .MuiCardContent-root {
+  padding: 16px;
+}
+
+.detailed-news .MuiTypography-h5 {
+  margin-bottom: 12px;
+}
+
+.detailed-news .MuiTypography-body1 {
+  margin-bottom: 16px;
+}
+
+.detailed-news .MuiButton-root {
+  margin-top: 16px;
 }
